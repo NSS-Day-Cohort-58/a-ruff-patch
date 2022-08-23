@@ -1,0 +1,112 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "image": "https://images.dog.ceo/breeds/borzoi/n02090622_6372.jpg",
+      "name": "Snickers"
+    },
+    {
+      "id": 2,
+      "image": "https://images.dog.ceo/breeds/australian-shepherd/sadie.jpg",
+      "name": "Bentley"
+    },
+    {
+      "id": 3,
+      "image": "https://images.dog.ceo/breeds/terrier-dandie/n02096437_730.jpg",
+      "name": "Angus"
+    },
+    {
+      "id": 4,
+      "image": "https://images.dog.ceo/breeds/pembroke/n02113023_3473.jpg",
+      "name": "Pumpkin"
+    },
+    {
+      "id": 5,
+      "image": "https://images.dog.ceo/breeds/pembroke/n02113023_2970.jpg",
+      "name": "Addy"
+    }
+  ],
+  "jokes": [
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Why should you never talk to pi?",
+      "delivery": "Because it will go on forever.",
+      "id": 318,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Why do front end developers eat lunch alone?",
+      "delivery": "Because they don't know how to join tables.",
+      "id": 254,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What's the difference between a poorly dressed man on a unicycle and a well dressed man on a bicycle?",
+      "delivery": "Attire.",
+      "id": 267,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Which is faster, Hot or cold?",
+      "delivery": "Hot, because you can catch a cold",
+      "id": 279,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Why shouldn't you visit an expensive wig shop?",
+      "delivery": "It's too high a price \"toupee.\"",
+      "id": 268,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "You see, mountains aren't just funny.",
+      "delivery": "They are hill areas.",
+      "id": 270,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Did you hear about the claustrophobic astronaut?",
+      "delivery": "He just needed a little space.",
+      "id": 276,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What do you get when you cross a Rhinocerous and an Elephant?",
+      "delivery": "Hell if I know.",
+      "id": 301,
+      "lang": "en"
+    }
+  ],
+  "performances": [
+    {
+      "dogId": 2,
+      "jokeId": 318,
+      "id": 1
+    },
+    {
+      "dogId": 4,
+      "jokeId": 276,
+      "id": 2
+    },
+    {
+      "dogId": 5,
+      "jokeId": 279,
+      "id": 3
+    }
+  ]
+}
