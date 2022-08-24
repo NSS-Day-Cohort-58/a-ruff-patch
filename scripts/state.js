@@ -6,6 +6,8 @@ const applicationState = {
 
 const api = "http://localhost:8088"
 
+// we need to create a POST function for adding performances to the database
+
 // Jokes
 export const fetchJokes = () => {
     return fetch(`${api}/jokes`)
@@ -36,5 +38,24 @@ export const getDogs = () => structuredClone(applicationState.dogs)
          applicationState.performances = performances
      })
  }
- 
+
+ //Saving a performance
+
+ const main = document.querySelector("#container")
+
+ export const savePerformance = (performanceObject) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(performanceObject)
+    }
+    return fetch(`${api}/performances`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            main.dispatchEvent(new CustomEvent('performanceCreated'))
+        })
+ }
+
  export const getPerformances = () => structuredClone(applicationState.performances)
