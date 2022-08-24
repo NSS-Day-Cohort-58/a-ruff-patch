@@ -7,20 +7,16 @@
         When a performer is selected, update API database with relationship
 */
 
-
+import { getJokes, getDogs, getPerformances } from "./state.js"
 
 export const JokeList = () => {
 
-    return `
-        <h1>A Ruff Patch</h1>
-        <h2>Where Dog Comedians Perform</h2>
-
-
-    `
     // get all data from application state (jokes, dogs, performances)
+    const jokes = getJokes()
+    const performances = getPerformances()
+    const dogs = getDogs()
     // iterate over all jokes
-    // for each of the jokes
-        // check whether or not it has been performed
+    // for each of the jokes check whether or not it has been performed
             // if it has been performed, render it with punchline and dog
                 // to check if it has been performed
                     // iterate over all performances
@@ -29,6 +25,22 @@ export const JokeList = () => {
                         // to find the matching dog, match performance dogId with dog.id
 
             // if it has NOT been performed, render it with no punchline, and a dropdown for performer
+        return `
+        <h1>A Ruff Patch</h1>
+        <h2>Where Dog Comedians Perform</h2>
+        ${
+            jokes.map((joke) => {
+                let foundPerformance = performances.find((performance) => {
+                    return joke.id === performance.jokeId
+                })
+                if(foundPerformance) {
+                    return `<div>${joke.setup} (has been performed)</div>`
+                } else {
+                    return `<div>${joke.setup}</div>`
+                }
+            }).join("")
+        }
+  `
 }
 
 
