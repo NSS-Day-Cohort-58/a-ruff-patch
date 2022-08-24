@@ -99,14 +99,9 @@
       "id": 1
     },
     {
-      "dogId": 4,
-      "jokeId": 276,
-      "id": 2
-    },
-    {
-      "dogId": 5,
+      "dogId": 1,
       "jokeId": 279,
-      "id": 3
+      "id": 2
     }
   ]
 }
