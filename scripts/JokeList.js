@@ -34,9 +34,21 @@ export const JokeList = () => {
                     return joke.id === performance.jokeId
                 })
                 if(foundPerformance) {
-                    return `<div>${joke.setup} (has been performed)</div>`
+                    const foundDog = dogs.find((dog) => {
+                        return foundPerformance.dogId === dog.id
+                    })
+                    return `<div><div class="jokeSetup">${joke.setup}</div> <img class="dog__image" src=${foundDog.image}></div>`
                 } else {
-                    return `<div>${joke.setup}</div>`
+                    return `<div>${joke.setup}
+                        <select class="dogs">
+                            <option value="">Select a performer</option>
+                                ${dogs.map((dog) => {
+                                    return `<option value="${dog.id}">${dog.name}</option>`
+                                })
+                            }
+                            
+                        </select></div>
+                    `
                 }
             }).join("")
         }

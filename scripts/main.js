@@ -16,4 +16,3 @@ const render = () => {
 main.addEventListener( "performanceCreated", render )
 
 render()
-
