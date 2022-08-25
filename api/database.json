@@ -107,6 +107,21 @@
       "dogId": 5,
       "jokeId": 279,
       "id": 3
+    },
+    {
+      "dogId": 4,
+      "jokeId": 267,
+      "id": 4
+    },
+    {
+      "dogId": 5,
+      "jokeId": 254,
+      "id": 5
+    },
+    {
+      "dogId": 2,
+      "jokeId": 268,
+      "id": 6
     }
   ]
 }

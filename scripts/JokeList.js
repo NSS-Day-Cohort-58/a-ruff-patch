@@ -7,7 +7,7 @@
         When a performer is selected, update API database with relationship
 */
 
-import { getJokes, getDogs, getPerformances } from "./state.js"
+import { getJokes, getDogs, getPerformances, savePerformance } from "./state.js"
 
 export const JokeList = () => {
 
@@ -37,13 +37,17 @@ export const JokeList = () => {
                     const foundDog = dogs.find((dog) => {
                         return foundPerformance.dogId === dog.id
                     })
-                    return `<div><div class="jokeSetup">${joke.setup}</div> <img class="dog__image" src=${foundDog.image}></div>`
+                    return `<div>
+                        <div class="jokeSetup">${joke.setup}</div>
+                        <img class="dog__image" src=${foundDog.image}>
+                        <div class="jokeDelivery">${joke.delivery}</div>
+                    </div>`
                 } else {
                     return `<div>${joke.setup}
-                        <select class="dogs">
+                        <select id="dogDropdown" class="dogs">
                             <option value="">Select a performer</option>
                                 ${dogs.map((dog) => {
-                                    return `<option value="${dog.id}">${dog.name}</option>`
+                                    return `<option value="${dog.id}--${joke.id}">${dog.name}</option>`
                                 })
                             }
                             
@@ -58,7 +62,15 @@ export const JokeList = () => {
 
 document.addEventListener(
     "change",
-    e => { 
+    e => {
+        if(e.target.id === "dogDropdown") {
+            const [dogId, jokeId] = e.target.value.split("--")
+            const performanceObject = {
+                dogId: parseInt(dogId),
+                jokeId: parseInt(jokeId)
+            }
+            savePerformance(performanceObject)
+        }
         // listen for when a performer is selected from the joke dropdown
         // generate a performance object with selected dog id and selected joke id
         // add that to the database
