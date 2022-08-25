@@ -122,6 +122,16 @@
       "dogId": 2,
       "jokeId": 268,
       "id": 6
+    },
+    {
+      "dogId": 3,
+      "jokeId": 270,
+      "id": 7
+    },
+    {
+      "dogId": 4,
+      "jokeId": 301,
+      "id": 8
     }
   ]
 }

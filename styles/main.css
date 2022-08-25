@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 1rem 0;
 	background-color: lightcyan;
 	padding: 0.5rem;
+	flex-direction: row;
 }
 
 .joke__setup {
@@ -33,7 +34,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .joke__performer {
-	flex: 1
+	flex: 1;
+	width: 200px;
+	height: 200px;
 }
 
 .joke__delivery {

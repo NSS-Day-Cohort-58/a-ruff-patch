@@ -37,10 +37,13 @@ export const JokeList = () => {
                     const foundDog = dogs.find((dog) => {
                         return foundPerformance.dogId === dog.id
                     })
-                    return `<div>
-                        <div class="jokeSetup">${joke.setup}</div>
-                        <img class="dog__image" src=${foundDog.image}>
-                        <div class="jokeDelivery">${joke.delivery}</div>
+                    return `<div class="joke">
+                        <div class="joke__setup">
+                            <div>${joke.setup}</div>
+                            <div class="joke__delivery">${joke.delivery}</div>
+                        </div>
+                        <img class="joke__performer" src=${foundDog.image} />
+                        
                     </div>`
                 } else {
                     return `<div>${joke.setup}
